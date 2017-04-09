@@ -1,0 +1,4 @@
+/node_modules
+/.idea
+/application/config/database.php
+.env
