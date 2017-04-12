@@ -95,7 +95,6 @@ class Welcome extends CI_Controller {
 		$raw_input_stream = $this->input->raw_input_stream;
 		$json_data = json_decode( $raw_input_stream, true );
 		$emailOponent = $json_data['emailOponent'];
-		//$emailOponent = "lajtaruk@gmail.com";
 		$roomid = rand(100000000,999999999);
 		//return $roomid;
 
@@ -297,7 +296,7 @@ class Welcome extends CI_Controller {
 		//$message = $this->init('email');
 		$message = $this->getOptions('email');
 		$message['mailtext'] = str_replace('{%room_url%}', $data['url'], $message['mailtext']);
-		$from = "sergius.lajtaruk@gmail.com";
+		$from = "local@mail.com";
 		$headers = "";
 		$headers .= "Content-type: text/html; charset=UTF-8 \r\n"; 
 		$headers .= "From: ".$from."\r\n"."Reply-To: ".$from."\r\n";
@@ -426,7 +425,6 @@ class Welcome extends CI_Controller {
 		srand((double) microtime() * 1000000);
 		//$emailCreator = Request::input('emailCreator');
 		$emailOponent = $request->input('emailOponent');
-		//$emailOponent = "lajtaruk@gmail.com";
 		$roomid = rand(100000000,999999999);
 		//return $roomid;
 
@@ -581,7 +579,7 @@ class Welcome extends CI_Controller {
 		//$message = $this->init('email');
 		$message = $this->getOptions('email');
 		$message['mailtext'] = str_replace('{%room_url%}', $data['url'], $message['mailtext']);
-		$from = "sergius.lajtaruk@gmail.com";
+		$from = "";
 		$headers = "";
 		$headers .= "Content-type: text/html; charset=UTF-8 \r\n"; 
 		$headers .= "From: ".$from."\r\n"."Reply-To: ".$from."\r\n";
